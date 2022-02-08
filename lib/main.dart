@@ -28,13 +28,14 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(),
         body: Column(
-      children: [
-        ProfileHeader(),
-        ProfileCountInfo(),
-        ProfileButtons(),
-        ProfileTab(),
-      ],
-    ));
+          children: [
+            ProfileHeader(),
+            ProfileCountInfo(),
+            ProfileButtons(),
+            ProfileTab(),
+          ],
+        ));
   }
 }
