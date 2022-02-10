@@ -16,6 +16,12 @@ class ProfileHeader extends StatelessWidget {
   }
 
   Widget _buildHeaderAvatar() {
-    return SizedBox();
+    return SizedBox(
+      width: 100,
+      height: 100,
+      child: CircleAvatar(
+        backgroundImage: AssetImage("assets/peter.png"),
+      ),
+    );
   }
 }
