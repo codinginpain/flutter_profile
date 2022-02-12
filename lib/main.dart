@@ -33,8 +33,11 @@ class ProfilePage extends StatelessWidget {
         appBar: _buildProfileAppBar(),
         body: Column(
           children: [
+            SizedBox(height: 20),
             ProfileHeader(),
+            SizedBox(height: 20),
             ProfileCountInfo(),
+            SizedBox(height: 20),
             ProfileButtons(),
             ProfileTab(),
           ],
