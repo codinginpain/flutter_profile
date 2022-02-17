@@ -18,7 +18,7 @@ class ProfileHeader extends StatelessWidget {
       width: 100,
       height: 100,
       child: CircleAvatar(
-        backgroundImage: AssetImage("assets/avatar.png"),
+        backgroundImage: AssetImage("assets/peter.png"),
       ),
     );
   }
@@ -33,7 +33,7 @@ class ProfileHeader extends StatelessWidget {
         ),
         Text(
           "Programmer / Scuba Instructor / Online Seller",
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 12),
         ),
         Text(
           "Coding in Pain",

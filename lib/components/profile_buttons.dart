@@ -4,6 +4,7 @@ class ProfileButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         _buildFollowButton(),
         _buildMessageButton(),
@@ -12,10 +13,39 @@ class ProfileButtons extends StatelessWidget {
   }
 
   Widget _buildFollowButton() {
-    return SizedBox();
+    return InkWell(
+      onTap: () {
+        print("Follow clicked");
+      },
+      child: Container(
+        alignment: Alignment.center,
+        width: 150,
+        height: 45,
+        child: Text(
+          "Follow",
+          style: TextStyle(color: Colors.white),
+        ),
+        decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(10),
+        ),
+      ),
+    );
   }
 
   Widget _buildMessageButton() {
-    return SizedBox();
+    return Container(
+      alignment: Alignment.center,
+      width: 150,
+      height: 45,
+      child: Text(
+        "Message",
+        style: TextStyle(color: Colors.black),
+      ),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.black),
+        borderRadius: BorderRadius.circular(10),
+      ),
+    );
   }
 }
