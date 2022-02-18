@@ -39,7 +39,7 @@ class ProfilePage extends StatelessWidget {
             ProfileCountInfo(),
             SizedBox(height: 20),
             ProfileButtons(),
-            ProfileTab(),
+            Expanded(child: ProfileTab()),
           ],
         ));
   }
