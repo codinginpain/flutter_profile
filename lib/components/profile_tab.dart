@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // Stateful 상태가 있는 위젯 - > 상태에 따라 위젯이 변경 된다.
@@ -37,9 +38,20 @@ class _ProfileTabState extends State<ProfileTab>
   }
 
   Widget _buildTabBarView() {
-    return TabBarView(controller: _tabController, children: [
-      Container(color: Colors.red),
-      Container(color: Colors.green),
-    ]);
+    return TabBarView(
+      controller: _tabController,
+      children: [
+        GridView.builder(
+            itemCount: 20,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3, crossAxisSpacing: 10, mainAxisSpacing: 10),
+            itemBuilder: (context, index) {
+              return Image.network(
+                  "https://picsum.photos/id/${index + 10}/200/200",
+                  scale: 0.1);
+            }),
+        Container(color: Colors.green),
+      ],
+    );
   }
 }
