@@ -42,7 +42,7 @@ class _ProfileTabState extends State<ProfileTab>
       controller: _tabController,
       children: [
         GridView.builder(
-            itemCount: 20,
+            itemCount: 30,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3, crossAxisSpacing: 10, mainAxisSpacing: 10),
             itemBuilder: (context, index) {
